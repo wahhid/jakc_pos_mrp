@@ -1,5 +1,15 @@
+import time
+from collections import OrderedDict
+
+import openerp.addons.decimal_precision as dp
 from openerp.osv import fields, osv
+from openerp.tools import DEFAULT_SERVER_DATE_FORMAT
 from openerp.tools import float_compare, float_is_zero
+from openerp.tools.translate import _
+from openerp import tools, SUPERUSER_ID
+from openerp.exceptions import UserError, AccessError
+
+
 
 class mrp_production(osv.osv):
     _inherit = 'mrp.production'
